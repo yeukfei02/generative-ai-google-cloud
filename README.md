@@ -1,6 +1,8 @@
 # generative-ai-google-cloud
 
-generative-ai-google-cloud
+This project intends to use google cloud function with vertex ai gemini to make API with generative ai, there is one API for `text-to-text`
+
+The model uses `gemini 1.0`
 
 documentation: <https://documenter.getpostman.com/view/3827865/2sA2xe6FP5>
 
