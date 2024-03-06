@@ -11,8 +11,8 @@ def get_itinerary_handler(request):
         "result": {}
     }
 
-    day = request.args.get("day")
-    country = request.args.get("country")
+    day = request.args.get("day") or "7"
+    country = request.args.get("country") or "Hong Kong"
 
     result = generate_itinerary_by_gemini(day, country)
     if result:
@@ -28,7 +28,7 @@ def get_itinerary_handler(request):
     return (response, 200, headers)
 
 
-def generate_itinerary_by_gemini(day=7, country="Hong Kong"):
+def generate_itinerary_by_gemini(day, country):
     result = ""
 
     vertexai.init(project="strange-vortex-416210", location="asia-southeast1")
