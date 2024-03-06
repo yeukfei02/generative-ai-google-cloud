@@ -1,0 +1,22 @@
+service: generative-ai-gcloud
+
+frameworkVersion: '3'
+
+provider:
+  name: google
+  stage: prod
+  runtime: python39
+  region: asia-southeast1
+  project: 672765669230
+  credentials: ~/.gcloud/keyfile.json
+  memorySize: 1024
+  timeout: 540s
+
+functions:
+  getItinerary:
+    handler: get_itinerary_handler
+    events:
+      - http: "GET /get-itinerary"
+
+plugins:
+  - serverless-google-cloudfunctions
