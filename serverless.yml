@@ -7,7 +7,7 @@ provider:
   stage: prod
   runtime: python39
   region: asia-southeast1
-  project: generative-ai-gcloud
+  project: 672765669230
   credentials: ~/.gcloud/keyfile.json
   memorySize: 1024
   timeout: 540s

@@ -4,9 +4,7 @@ generative-ai-google-cloud
 
 documentation: <>
 
-findAddress api url: <>
-
-getCheapFood api url: <>
+getItinerary api url: <https://asia-southeast1-strange-vortex-416210.cloudfunctions.net/generative-ai-gcloud-prod>
 
 ## Requirement
 

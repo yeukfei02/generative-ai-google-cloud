@@ -11,16 +11,15 @@ def get_itinerary_handler(request):
         "result": {}
     }
 
-    if request.args:
-        day = request.args.get("day")
-        country = request.args.get("country")
+    day = request.args.get("day")
+    country = request.args.get("country")
 
-        result = generate_itinerary_by_gemini(day, country)
-        if result:
-            response = {
-                "message": "get_itinerary",
-                "result": result
-            }
+    result = generate_itinerary_by_gemini(day, country)
+    if result:
+        response = {
+            "message": "get_itinerary",
+            "result": result
+        }
 
     headers = {
         "Access-Control-Allow-Origin": "*"
