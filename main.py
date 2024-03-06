@@ -59,6 +59,6 @@ def generate_itinerary_by_gemini(day, country):
         for response in responses:
             print(f"response.text = {response.text}")
 
-            result += response.text
+            result += response.text.replace('\n', '<br/>')
 
     return result
