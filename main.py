@@ -11,7 +11,7 @@ def get_itinerary_handler(request):
         "result": {}
     }
 
-    day = request.args.get("day") or "7"
+    day = request.args.get("day") or "5"
     country = request.args.get("country") or "Hong Kong"
 
     result = generate_itinerary_by_gemini(day, country)

@@ -4,7 +4,7 @@ generative-ai-google-cloud
 
 documentation: <>
 
-getItinerary api url: <https://asia-southeast1-strange-vortex-416210.cloudfunctions.net/generative-ai-gcloud-prod>
+getItinerary api url: <https://asia-southeast1-strange-vortex-416210.cloudfunctions.net/generative-ai-gcloud-prod-getItinerary>
 
 ## Requirement
 
