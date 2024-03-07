@@ -34,3 +34,12 @@ $ yarn run remove
 // check serverless.yml
 $ yarn run doctor
 ```
+
+```zsh
+// install dependencies
+$ cd web
+$ pip install -r requirements.txt
+
+// open web
+$ streamlit run travel_planner.py
+```
