@@ -8,6 +8,8 @@ documentation: <https://documenter.getpostman.com/view/3827865/2sA2xe6FP5>
 
 getItinerary api url: <https://asia-southeast1-strange-vortex-416210.cloudfunctions.net/generative-ai-gcloud-prod-getItinerary>
 
+travel planner web url: <https://travel-planner-gen-ai.streamlit.app/>
+
 ## Requirement
 
 - install yarn
