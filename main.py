@@ -39,15 +39,18 @@ def generate_wallpaper_handler(request):
 
     text = request.args.get("text")
     image_count = request.args.get("image_count") or "1"
-    token = request.args.get("token")
 
-    if text and image_count and token:
-        result = generate_wallpaper_by_imagen(text, image_count, token)
-        if result:
-            response = {
-                "message": "generate_wallpaper",
-                "result": result
-            }
+    authorization = request.headers.get("Authorization")
+    if authorization:
+        token = authorization[7:]
+
+        if text and image_count and token:
+            result = generate_wallpaper_by_imagen(text, image_count, token)
+            if result:
+                response = {
+                    "message": "generate_wallpaper",
+                    "result": result
+                }
 
     headers = {
         "Access-Control-Allow-Origin": "*"
@@ -98,8 +101,9 @@ def generate_wallpaper_by_imagen(text, image_count, token):
     try:
         project_id = "672765669230"
         region = "asia-southeast1"
+        model = "imagegeneration@005"
 
-        root_url = f"https://{region}-aiplatform.googleapis.com/v1/projects/{project_id}/locations/{region}/publishers/google/models/imagegeneration:predict"
+        root_url = f"https://{region}-aiplatform.googleapis.com/v1/projects/{project_id}/locations/{region}/publishers/google/models/{model}:predict"
 
         body = {
             "instances": [
@@ -108,7 +112,8 @@ def generate_wallpaper_by_imagen(text, image_count, token):
                 }
             ],
             "parameters": {
-                "sampleCount": int(image_count)
+                "sampleCount": int(image_count),
+                "guidanceScale": "high"
             }
         }
 
