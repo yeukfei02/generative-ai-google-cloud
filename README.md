@@ -12,6 +12,8 @@ generate wallpaper api url: <https://asia-southeast1-strange-vortex-416210.cloud
 
 travel planner web url: <https://travel-planner-gen-ai.streamlit.app/>
 
+generate wallpaper web url: <https://generate-wallpaper.streamlit.app/>
+
 ## Requirement
 
 - install yarn
