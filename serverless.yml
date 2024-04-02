@@ -17,6 +17,11 @@ functions:
     handler: get_itinerary_handler
     events:
       - http: "GET /get-itinerary"
+        
+  generateWallpaper:
+    handler: generate_wallpaper_handler
+    events:
+      - http: "GET /generate-wallpaper"
 
 plugins:
   - serverless-google-cloudfunctions
